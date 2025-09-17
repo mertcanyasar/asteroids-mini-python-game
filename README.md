@@ -1,0 +1,1 @@
+In game, asteroids are visually represented as circles, and the player is a triangle.
