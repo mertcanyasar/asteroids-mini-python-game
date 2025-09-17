@@ -1,6 +1,8 @@
 import pygame # pyright: ignore[reportMissingImports]
 from constants import *
 from player import *
+from asteroid import *
+from asteroidfield import *
 
 def main():
     pygame.init()
@@ -11,7 +13,13 @@ def main():
 
     drawable = pygame.sprite.Group()
     updatable = pygame.sprite.Group()
+    asteroids = pygame.sprite.Group()
+
     Player.containers = (drawable, updatable)
+    Asteroid.containers = (asteroids, drawable, updatable)
+    AsteroidField.containers = updatable
+
+    asteroid_field = AsteroidField()
 
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
