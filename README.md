@@ -14,3 +14,5 @@ If we press the move-forward key, the ship should move forward.
 If we press the move-backward key, the ship should move backward.
 
 Space for shoot.
+
+You can play from: [Itch.io Page](https://mertcanyasar.itch.io/asteroids-mini-python-game)
