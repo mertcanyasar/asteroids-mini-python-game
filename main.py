@@ -5,8 +5,9 @@ from asteroid import *
 from asteroidfield import *
 from bullet import *
 import sys
+import asyncio
 
-def main():
+async def main():
     pygame.init()
     
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -53,9 +54,13 @@ def main():
             obj.draw(screen)
 
         pygame.display.flip()
-        rt = clock.tick(FPS)
+
+        await asyncio.sleep(0)
+        rt = clock.tick(60)
         dt = rt/1000
+
+        
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
